@@ -40,9 +40,30 @@ addEventListener("keyup", function (e) {
     }
 }, false);
 
+function startTheGame() {
+    gameStarted = true;
+    gameBeginning = false;
+    gameOver = false;
+}
+
 
 var maxX = canvas.offsetWidth;
 var maxY = canvas.offsetHeight;
+
+canvas.addEventListener("touchend", function (e) {
+    var mouseEvent = new MouseEvent("mouseup", {});
+    canvas.dispatchEvent(mouseEvent);
+    if (!gameStarted) {
+        startTheGame();
+    }
+    else {
+        launchTheRokcet();
+    }
+
+    // alert("touch end");
+
+}, false);
+
 
 function handleOrientation(event) {
     console.log("orientation : ");
