@@ -47,8 +47,8 @@ function startTheGame() {
 }
 
 
-var maxX = canvas.offsetWidth;
-var maxY = canvas.offsetHeight;
+var maxX = 500;
+var maxY = 500;
 
 canvas.addEventListener("touchend", function (e) {
     var mouseEvent = new MouseEvent("mouseup", {});
@@ -87,7 +87,7 @@ function handleOrientation(event) {
     // It center the positioning point to the center of the ball
     //   ball.style.top  = (maxX*x/180 - 10) + "px";
     //   ball.style.left = (maxY*y/180 - 10) + "px";
-    if (player) {
+    if (player && player.length > 0) {
         player[selectedPlayerIndex].update((maxX * x / 180 - 10), (maxY * y / 180 - 10));
     }
 }
