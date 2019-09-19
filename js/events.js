@@ -66,7 +66,7 @@ canvas.addEventListener("touchend", function (e) {
 
 
 function handleOrientation(event) {
-    console.log("orientation : ");
+    console.log("orientation : ", event);
     var x = event.beta;  // In degree in the range [-180,180]
     var y = event.gamma; // In degree in the range [-90,90]
 
@@ -83,12 +83,16 @@ function handleOrientation(event) {
     x += 90;
     y += 90;
 
+
     // 10 is half the size of the ball
     // It center the positioning point to the center of the ball
     //   ball.style.top  = (maxX*x/180 - 10) + "px";
     //   ball.style.left = (maxY*y/180 - 10) + "px";
+
     if (player && player.length > 0) {
         player[selectedPlayerIndex].update((maxX * x / 180 - 10), (maxY * y / 180 - 10));
+        document.getElementById("xy").innerHTML = (maxX * x / 180 - 10) + " " + (maxY * y / 180 - 10);
+        alert((maxX * x / 180 - 10) + " " + (maxY * y / 180 - 10));
     }
 }
 
