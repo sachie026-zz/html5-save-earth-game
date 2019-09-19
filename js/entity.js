@@ -28,6 +28,11 @@ class Player extends Entity {
         this.x += x;
     }
 
+    orient(x, y) {
+        this.y = y;
+        this.x = x;
+    }
+
     render() {
         ctx.drawImage(this.img, this.x, this.y);
     }

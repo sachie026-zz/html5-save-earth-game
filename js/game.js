@@ -158,6 +158,10 @@ var update = function (modifier) {
 			player[selectedPlayerIndex].update(1 * playerSpeed, 0);
 		}
 	}
+	// if (player && player.length > 0) {
+	// 	player[0].update(Math.round(24.234444), Math.round(24.234444));
+	// 	player[0].render();
+	// }
 };
 
 // Draw everything
