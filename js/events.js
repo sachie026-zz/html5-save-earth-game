@@ -47,8 +47,8 @@ function startTheGame() {
 }
 
 
-var maxX = 500;
-var maxY = 500;
+var maxX = 800;
+var maxY = 1000;
 
 canvas.addEventListener("touchend", function (e) {
     var mouseEvent = new MouseEvent("mouseup", {});
@@ -90,7 +90,7 @@ function handleOrientation(event) {
     //   ball.style.left = (maxY*y/180 - 10) + "px";
 
     if (player && player.length > 0) {
-        player[selectedPlayerIndex].orient((maxX * x / 180 - 10), (maxY * y / 180 - 10));
+        player[selectedPlayerIndex].orient((maxY * y / 180 - 10), (maxX * x / 180 - 10));
         // player[selectedPlayerIndex].render();
         document.getElementById("xy").innerHTML = (maxX * x / 180 - 10) + " " + (maxY * y / 180 - 10);
         //  alert((maxX * x / 180 - 10) + " " + (maxY * y / 180 - 10));
