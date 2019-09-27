@@ -47,7 +47,8 @@ class Enemy extends Entity {
     update() {
         if (this.isMoving) {
             if (this.x < 0) {
-                this.x = canvas.width
+                this.x = canvas.width;
+                this.y = Math.floor(Math.random() * 600) + 100;
             }
             this.x -= enemySpeed;
         }

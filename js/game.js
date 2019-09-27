@@ -2,13 +2,12 @@
 var keysDown = {};
 
 // Create the canvas
-var canvas = document.createElement("canvas");
-var ctx = canvas.getContext("2d");
-// canvas.width = 1600;
-// canvas.height = 800;
-canvas.width = window.innerWidth - 300;
-canvas.height = window.innerHeight - 400;
-document.body.appendChild(canvas);
+// var canvas = document.createElement("canvas");
+// var ctx = canvas.getContext("2d");
+// // canvas.width = 1600;
+// // canvas.height = 800;
+// canvas.width = window.innerWidth - 300;
+// canvas.height = window.innerHeight - 400;
 
 let GameScore = 0;
 let enemySpeed = 3;
